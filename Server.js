@@ -17,13 +17,13 @@ const server = http.createServer((req, res)=>{
     switch(req.url){
         case "/":
             path += "index.html";
-            res.statusCode = 200;
+            res.statusCode = 200; 
             break;
         case "/about":
             path += "about.html";
             res.statusCode = 200;
             break;
-        case "/about-me":
+        case "/about-uss":
             res.statusCode = 301;  //moved on
             res.setHeader("Location", "/about");
             res.end();
