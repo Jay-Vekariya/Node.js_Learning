@@ -22,18 +22,18 @@ app.get('/', (req, res)=>{
     ];
     // res.send("<h1>Home Page</h1>"); 
     // res.sendFile("./Views/index.html", {root: __dirname});
-    res.render("index", {title:"Jay", blogs}); 
+    res.render("index", {title:"Index", blogs}); 
     //The res.render() method in JavaScript is typically used in web development frameworks like Express.js. It is responsible for rendering a specified view template and sending the rendered HTML back to the client.
 });
 
 app.get('/about', (req, res)=>{
     // res.send("<h1>About Page</h1>");
     // res.sendFile("./Views/about.html", {root: __dirname});
-    res.render("about");
+    res.render("about", {title:"About"});
 });
 
 app.get("/about/create", (req, res)=>{
-    res.render("create");
+    res.render("create", {title:"Create"});
 
 })
 
