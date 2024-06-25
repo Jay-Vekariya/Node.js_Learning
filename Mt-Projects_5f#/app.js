@@ -16,6 +16,7 @@ mongoose.connect(DB_URL, {useNewUrlParser:true, useUnifiedTopology:true})
 
 //middleware & static file
 app.use(express.static("Public"));
+app.use(express.urlencoded({extended:true})); //return all flieds in req object.
 app.use(morgan("dev"))
 
 /*
@@ -90,7 +91,19 @@ app.get('/blogs', (req, res)=>{
  }).catch((err)=>{
     console.log(err);
  })
-})
+});
+
+app.post('/blogs', (req, res)=>{
+    const blog = new Blog(req.body);    
+    blog.save()
+    .then((result)=>{
+        res.redirect("/blogs")
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+});
+
 
 app.get("/about/create", (req, res)=>{
     res.render("create", {title:"Create"});
