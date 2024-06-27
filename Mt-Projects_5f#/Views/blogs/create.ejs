@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('./partials/nav.ejs') %>
+    <%- include('../partials/nav.ejs') %>
     <div>
         <h2>AllBlogs</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quas deserunt dignissimos similique reiciendis magnam est quasi fugiat sequi ad aut blanditiis repudiandae voluptas adipisci ipsa cumque. Ratione quis repudiandae ut commodi obcaecati repellendus similique sint distinctio, ipsa impedit. Saepe doloribus inventore at quasi eveniet harum officiis illo. Provident architecto ipsam illo officia, molestias, ab nihil accusamus aut velit praesentium aliquid vitae sequi quis quasi. Doloremque molestiae eius dolores optio, voluptates ullam praesentium dolor culpa libero deleniti sed sunt deserunt provident possimus fugit quae, perspiciatis assumenda, alias odio? Laboriosam pariatur quibusdam voluptatem vel dolore illo nobis ipsa praesentium corporis sit.</p>
     </div>
-    <form action="/blogs" method="post">
+    <form action="/blogs" method="post" class="form_page">
         <label for="title">Blog Title</label>
         <input type="text" name="title" id="title" placeholder="Title" required><br />
         <label for="title">Blog snippet</label>
@@ -16,6 +16,6 @@
         <textarea id="body" name="body" placeholder="blog body" required></textarea>
         <button type="submit">Submit</button>
     </form>
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
