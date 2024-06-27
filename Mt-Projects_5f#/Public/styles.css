@@ -66,3 +66,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.delete {
+    background-color: #f1356d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
